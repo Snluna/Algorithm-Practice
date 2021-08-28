@@ -8,9 +8,9 @@
 
 #define DEBUG
 
-const int N = 55;
+const int L = 55;
 
-char s[N];
+char s[L];
 
 int main()
 {
@@ -30,6 +30,11 @@ int main()
   if (!(len & 1)) {
     printf("%c", s[len - 1]);
   }
+
+  #ifdef DEBUG
+    fclose(stdin);
+    fclose(stdout);
+  #endif // DEBUG
 
   return 0;
 }

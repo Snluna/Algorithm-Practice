@@ -8,9 +8,9 @@
 
 #define DEBUG
 
-const int N = 1005;
+const int L = 1005;
 
-char sa[N], sb[N];
+char sa[L], sb[L];
 int dict[30][30];
 int tag[30];
 
@@ -70,6 +70,11 @@ int main()
 
     printf("Case #%d: %s\n", kcase, flag ? "happy" : "unhappy");
   }
+
+  #ifdef DEBUG
+    fclose(stdin);
+    fclose(stdout);
+  #endif // DEBUG
 
   return 0;
 }

@@ -12,11 +12,11 @@
 #define DEBUG
 
 const int N = 120;
-const int maxn = 110;
+const int L = 110;
 
 struct Person
 {
-  char name[maxn];
+  char name[L];
   int birth_year;
 }people[N];
 
@@ -51,6 +51,11 @@ int main()
       printf("%s\n", people[i].name);
     }
   }
+
+  #ifdef DEBUG
+    fclose(stdin);
+    fclose(stdout);
+  #endif // DEBUG
 
   return 0;
 }

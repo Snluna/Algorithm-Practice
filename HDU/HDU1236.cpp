@@ -66,5 +66,10 @@ int main()
     }
   }
 
+  #ifdef DEBUG
+    fclose(stdin);
+    fclose(stdout);
+  #endif // DEBUG
+
   return 0;
 }
