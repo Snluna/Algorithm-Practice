@@ -9,8 +9,6 @@
 #include <algorithm>
 #include <vector>
 
-#define DEBUG
-
 const int N = 120;
 const int L = 110;
 
@@ -26,11 +24,6 @@ bool cmp(Person a, Person b) {
 
 int main()
 {
-  #ifdef DEBUG
-    freopen("in.txt", "r", stdin);
-    freopen("out.txt", "w", stdout);
-  #endif // DEBUG
-
   int T;
   scanf("%d", &T);
   int n;
@@ -51,11 +44,6 @@ int main()
       printf("%s\n", people[i].name);
     }
   }
-
-  #ifdef DEBUG
-    fclose(stdin);
-    fclose(stdout);
-  #endif // DEBUG
 
   return 0;
 }

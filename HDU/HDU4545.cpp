@@ -6,26 +6,20 @@
 #include <cstdio>
 #include <cstring>
 
-#define DEBUG
-
 const int L = 1005;
+const int N = 30;
 
 char sa[L], sb[L];
-int dict[30][30];
-int tag[30];
+int dict[N][N];
+int tag[N];
 
 int main()
 {
-  #ifdef DEBUG
-    freopen("in.txt", "r", stdin);
-    freopen("out.txt", "w", stdout);
-  #endif // DEBUG
-
-  int T;
-  scanf("%d", &T);
+  int t;
+  scanf("%d", &t);
   int m;
   char da, db;
-  for (int kcase = 1; kcase <= T; kcase++) {
+  for (int kcase = 1; kcase <= t; kcase++) {
     std::memset(sa, '\0', sizeof(sa));
     std::memset(sb, '\0', sizeof(sb));
     std::memset(dict, 0, sizeof(dict));
@@ -70,11 +64,6 @@ int main()
 
     printf("Case #%d: %s\n", kcase, flag ? "happy" : "unhappy");
   }
-
-  #ifdef DEBUG
-    fclose(stdin);
-    fclose(stdout);
-  #endif // DEBUG
 
   return 0;
 }

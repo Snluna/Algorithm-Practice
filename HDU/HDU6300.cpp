@@ -8,8 +8,6 @@
 
 #include <algorithm>
 
-#define DEBUG
-
 const int N = 10000;
 
 struct coo
@@ -20,11 +18,6 @@ struct coo
 
 int main()
 {
-  #ifdef DEBUG
-    freopen("in.txt", "r", stdin);
-    freopen("out.txt", "w", stdout);
-  #endif // DEBUG
-
   auto cmp = [](coo a, coo b) -> bool { return a.x < b.x; };
 
   int T;
@@ -41,11 +34,6 @@ int main()
       printf("%d %d %d\n", coos[i].id, coos[i + 1].id, coos[i + 2].id);
     }
   }
-
-  #ifdef DEBUG
-    fclose(stdin);
-    fclose(stdout);
-  #endif // DEBUG
 
   return 0;
 }

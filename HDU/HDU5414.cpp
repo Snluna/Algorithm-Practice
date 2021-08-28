@@ -8,19 +8,12 @@
 
 #include <algorithm>
 
-#define DEBUG
-
 const int L = 100010;
 
 char s[L], t[L];
 
 int main()
 {
-  #ifdef DEBUG
-    freopen("in.txt", "r", stdin);
-    freopen("out.txt", "w", stdout);
-  #endif // DEBUG
-
   int T;
   scanf("%d", &T);
   
@@ -58,11 +51,6 @@ int main()
 
     printf("%s\n", flag ? "Yes" : "No");
   }
-
-  #ifdef DEBUG
-    fclose(stdin);
-    fclose(stdout);
-  #endif // DEBUG
 
   return 0;
 }

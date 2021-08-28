@@ -6,19 +6,12 @@
 #include <cstdio>
 #include <cstring>
 
-#define DEBUG
-
 const int L = 55;
 
 char s[L];
 
 int main()
 {
-  #ifdef DEBUG
-    freopen("in.txt", "r", stdin);
-    freopen("out.txt", "w", stdout);
-  #endif // DEBUG
-
   scanf("%s", s);
   int len = strlen(s);
   int p = (len - 1) / 2;
@@ -30,11 +23,6 @@ int main()
   if (!(len & 1)) {
     printf("%c", s[len - 1]);
   }
-
-  #ifdef DEBUG
-    fclose(stdin);
-    fclose(stdout);
-  #endif // DEBUG
 
   return 0;
 }

@@ -11,8 +11,6 @@
 #include <string>
 #include <vector>
 
-#define DEBUG
-
 using namespace std;
 
 bool cmp(pair<string, int> a, pair<string, int> b) {
@@ -24,52 +22,42 @@ bool cmp(pair<string, int> a, pair<string, int> b) {
 
 int main()
 {
-  #ifdef DEBUG
-    freopen("in.txt", "r", stdin);
-    freopen("out.txt", "w", stdout);
-  #endif // DEBUG
-
-  int N, M, G;
-  while (scanf("%d", &N) && N) {
-    scanf("%d%d", &M, &G);
+  int n, m, g;
+  while (scanf("%d", &n) && n) {
+    scanf("%d%d", &m, &g);
     int score;
     vector<int> scores;
-    for (int i = 0; i < M; i++) {
+    for (int i = 0; i < m; i++) {
       scanf("%d", &score);
       scores.push_back(score);
     }
     vector<pair<string, int>> grades;
     string sid;
-    int num, qid;
-    int n = 0;
-    for (int i = 0; i < N; i++) {
+    int sum, qid;
+    int num = 0;
+    for (int i = 0; i < n; i++) {
       int grade = 0;
       cin >> sid;
-      scanf("%d", &num);
-      for (int j = 0; j < num; j++) {
+      scanf("%d", &sum);
+      for (int j = 0; j < sum; j++) {
         scanf("%d", &qid);
         grade += scores[qid - 1];
       }
-      if (grade >= G) {
-        n++;
+      if (grade >= g) {
+        num++;
         grades.push_back({sid, grade});
       }
     }
 
     sort(grades.begin(), grades.end(), cmp);
 
-    if (N > 0) {
+    if (n > 0) {
       printf("%d\n", n);
       for (auto it = grades.begin(); it != grades.end(); it++) {
         cout << it->first << " " << it->second << endl;
       }
     }
   }
-
-  #ifdef DEBUG
-    fclose(stdin);
-    fclose(stdout);
-  #endif // DEBUG
 
   return 0;
 }
