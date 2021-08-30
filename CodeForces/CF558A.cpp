@@ -3,22 +3,19 @@
  * Author: _thz
  * Date: Aug 29 2021
  ****************************************************/
-#include <cstdio>
-#include <cmath>
-#include <cstring>
-
 #include <algorithm>
+#include <cmath>
+#include <cstdio>
+#include <cstring>
 
 const int N = 105;
 
-struct ap
-{
+struct ap {
   int x;
   int a;
-}aps[N];
+} aps[N];
 
-int main()
-{
+int main() {
   auto cmp = [](ap a, ap b) -> bool { return a.x < b.x; };
 
   int n;

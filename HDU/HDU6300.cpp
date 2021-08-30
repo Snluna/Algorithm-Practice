@@ -3,21 +3,18 @@
  * Author: _thz
  * Date: Aug 25 2021
  ****************************************************/
+#include <algorithm>
 #include <cstdio>
 #include <cstring>
 
-#include <algorithm>
-
 const int N = 10000;
 
-struct coo
-{
+struct coo {
   int id;
   int x, y;
-}coos[3 * N + 1];
+} coos[3 * N + 1];
 
-int main()
-{
+int main() {
   auto cmp = [](coo a, coo b) -> bool { return a.x < b.x; };
 
   int T;

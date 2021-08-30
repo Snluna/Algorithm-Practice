@@ -3,12 +3,11 @@
  * Author: _thz
  * Date: Aug 16 2021
  ****************************************************/
+#include <algorithm>
 #include <cstdio>
 #include <iostream>
-
-#include <algorithm>
-#include <unordered_map>
 #include <string>
+#include <unordered_map>
 #include <vector>
 
 using namespace std;
@@ -20,8 +19,7 @@ bool cmp(pair<string, int> a, pair<string, int> b) {
   return a.second > b.second;
 }
 
-int main()
-{
+int main() {
   int n, m, g;
   while (scanf("%d", &n) && n) {
     scanf("%d%d", &m, &g);

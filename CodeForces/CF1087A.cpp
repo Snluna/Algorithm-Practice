@@ -10,8 +10,7 @@ const int L = 55;
 
 char s[L];
 
-int main()
-{
+int main() {
   scanf("%s", s);
   int len = strlen(s);
   int p = (len - 1) / 2;

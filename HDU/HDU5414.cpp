@@ -3,20 +3,18 @@
  * Author: _thz
  * Date: Aug 28 2021
  ****************************************************/
+#include <algorithm>
 #include <cstdio>
 #include <cstring>
-
-#include <algorithm>
 
 const int L = 100010;
 
 char s[L], t[L];
 
-int main()
-{
+int main() {
   int T;
   scanf("%d", &T);
-  
+
   bool flag;
   int lens, lent, i, j;
   while (T--) {
@@ -28,7 +26,7 @@ int main()
     lent = strlen(t);
 
     i = j = 0;
-    while (i < lens && j <lent) {
+    while (i < lens && j < lent) {
       if (s[i] == t[j]) {
         i++;
       }
@@ -48,7 +46,6 @@ int main()
         break;
       }
     }
-
     printf("%s\n", flag ? "Yes" : "No");
   }
 

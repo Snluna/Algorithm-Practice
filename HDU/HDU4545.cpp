@@ -13,8 +13,7 @@ char sa[L], sb[L];
 int dict[N][N];
 int tag[N];
 
-int main()
-{
+int main() {
   int t;
   scanf("%d", &t);
   int m;
@@ -61,7 +60,6 @@ int main()
         }
       }
     }
-
     printf("Case #%d: %s\n", kcase, flag ? "happy" : "unhappy");
   }
 

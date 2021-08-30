@@ -3,27 +3,22 @@
  * Author: _thz
  * Date: Aug 20 2021
  ****************************************************/
+#include <algorithm>
 #include <cstdio>
 #include <cstring>
-
-#include <algorithm>
 #include <vector>
 
 const int N = 120;
 const int L = 110;
 
-struct Person
-{
+struct Person {
   char name[L];
   int birth_year;
-}people[N];
+} people[N];
 
-bool cmp(Person a, Person b) {
-  return a.birth_year > b.birth_year;
-}
+bool cmp(Person a, Person b) { return a.birth_year > b.birth_year; }
 
-int main()
-{
+int main() {
   int T;
   scanf("%d", &T);
   int n;
@@ -35,7 +30,8 @@ int main()
       people[i].birth_year = 0;
       int len = strlen(people[i].name);
       for (int j = len - 4; j <= len - 1; j++) {
-        people[i].birth_year = people[i].birth_year * 10 + (people[i].name)[j] - '0';
+        people[i].birth_year =
+            people[i].birth_year * 10 + (people[i].name)[j] - '0';
       }
       (people[i].name)[len - 5] = '\0';
     }

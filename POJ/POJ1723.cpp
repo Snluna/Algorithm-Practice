@@ -3,17 +3,15 @@
  * Author: _thz
  * Date: Aug 29 2021
  ****************************************************/
-#include <cstdio>
-#include <cmath>
-
 #include <algorithm>
+#include <cmath>
+#include <cstdio>
 
 const int N = 10010;
 
 int x[N], y[N];
 
-int main()
-{
+int main() {
   int n;
   scanf("%d", &n);
   for (int i = 0; i < n; i++) {
